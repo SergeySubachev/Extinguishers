@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="windows-1251" />
+    <link href="../../../../common.css" rel="stylesheet">
+    <script type="text/javascript" src="calc.js"></script>
+</head>
+<body lang=RU style="background:none">
+    <h1>Расчет количества огнетушителей</h1>
+    
+    <h3>Выберите тип объекта защиты:</h3>
+    <p><input id="rbABV" type="radio" name="RoomType" style="transform:scale(1.8)" checked="checked" onchange="OnRoomTypeChange(0)" /> Производственное/складское помещение категории А, Б, В1-В4</p>
+    <p><input id="rbG" type="radio" name="RoomType" style="transform:scale(1.8)" onchange="OnRoomTypeChange(1)" /> Производственное/складское помещение категории Г</p>
+    <p><input id="rbD" type="radio" name="RoomType" style="transform:scale(1.8)" onchange="OnRoomTypeChange(2)" /> Производственное/складское помещение категории Д</p>
+    <p><input id="rbObsh" type="radio" name="RoomType" style="transform:scale(1.8)" onchange="OnRoomTypeChange(3)" /> Общественные здания</p>
+
+    <div id="divSquare">
+        <h3>Площадь помещения, м<sup>2</sup>:</h3>
+        <p><input id="edtSquare" type="number" style="font-size:larger" /></p>
+        <p style="font-size:small">*При наличии нескольких рядом расположенных помещений одного функционального назначения определение необходимого количества огнетушителей осуществляется по суммарной площади этих помещений.</p>
+    </div>
+
+    <h3>Укажите возможные классы пожаров в данном помещении (помещениях):</h3>
+    <p><input id="chbA" type="checkbox" style="transform:scale(2)" /> А - Пожары твердых горючих веществ и материалов (например: древесина, бумага, уголь, текстиль, пластмасса)</p>
+    <p><input id="chbB" type="checkbox" style="transform:scale(2)" /> В - Пожары горючих жидкостей или плавящихся твердых веществ и материалов (например: бензин, нефтепродукты, спирты и др.)</p>
+    <p><input id="chbC" type="checkbox" style="transform:scale(2)" /> С - Пожары газообразных горючих веществ (например: горение бытового газа, пропана, аммиака и др.)</p>
+    <p id="parD"><input id="chbD" type="checkbox" style="transform:scale(2)" /> D - Горение металлов и металлосодержащих веществ (например: алюминий, магний, натрий, калий и др.)</p>
+    <p><input id="chbE" type="checkbox" style="transform:scale(2)" /> Е - Пожары горючих веществ и материалов электроустановок, находящихся под напряжением</p>
+
+    <p style="text-align:center"><button id="btnCalc" onclick="btnCalcClick()" style="font-size:large;width:60vw">Рассчитать</button></p>
+
+    <div id="divResult">
+    </div>
+
+    <p style="font-size:small">*Настоящий расчет не распространяется на автозаправочные станции. Автозаправочные станции оснащаются первичными средствами пожаротушения согласно требованиям <a href="https://docs.cntd.ru/document/565837297?marker=A8A0ND">раздела XVII Правил противопожарного режима в Российской Федерации</a>.</p>
+
+</body>
+</html>
