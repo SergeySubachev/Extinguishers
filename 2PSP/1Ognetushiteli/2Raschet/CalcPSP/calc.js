@@ -63,8 +63,8 @@ function btnCalcClick() {
     }
 
     var A_B_C_E = ["", "", "", ""]; //ранг D - отдельные огнетушители
-    var rangA = iRoomType == 0 ? "4A" : "2A";
-    var rangB = iRoomType == 0 ? "144B" : "55B";
+    var rangA = iRoomType == 0 ? "3A" : "2A";
+    var rangB = iRoomType == 0 ? "70B" : "55B";
     if (chbA.checked) {
         A_B_C_E[0] = rangA;
     }
